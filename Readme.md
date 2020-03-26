@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Наталья Пилькевич](https://up.htmlacademy.ru/adaptive/19/user/1256225).
-* Наставник: `Неизвестно`.
+* Наставник: [Дарья Воздраганова] (https://htmlacademy.ru/profile/id1227143).
 
 ---
 
