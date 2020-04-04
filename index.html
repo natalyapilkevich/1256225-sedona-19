@@ -6,13 +6,9 @@
   </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="" width="102" height="83" alt="Лого Седоны">
-    </a>
-    <nav class="main-nav">
-      <button class="visually-hidden main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+    <div class="page-header__nav-wrapper">    
+      <nav class="page-header-nav">          
+        <ul class="page-header-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a>Главная</a>
           </li>
@@ -26,9 +22,13 @@
             <a href="">HTML Academy</a>
           </li>
         </ul>
-      </div>
-    </nav>  
-      <img class="page-header__slogan" src="" width="282" height="214" alt="Слоган">
+      </nav> 
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="" width="102" height="83" alt="Лого Седоны">
+      </a> 
+      <button class="visually-hidden page-header-nav__toggle" type="button">Открыть меню</button>  
+    </div>
+    <img class="page-header__slogan" src="" width="320" height="389" alt="Слоган">
     </header>  
     <main class="page-main">
       <h1 class="visually-hidden">Sedona</h1>       

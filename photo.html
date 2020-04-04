@@ -6,14 +6,10 @@
   </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="" width="102" height="83" alt="Лого Седоны">
-    </a>
-    <nav class="main-nav">
-      <button class="visually-hidden main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+    <div class="page-header__nav-wrapper">    
+      <nav class="page-header-nav">          
+        <ul class="page-header-nav__list site-list">
+          <li class="site-list__item">
             <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item site-list__item--active">
@@ -26,8 +22,12 @@
             <a href="">HTML Academy</a>
           </li>
         </ul>
-      </div>
-    </nav>  
+      </nav> 
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="" width="102" height="83" alt="Лого Седоны">
+      </a> 
+      <button class="visually-hidden page-header-nav__toggle" type="button">Открыть меню</button>  
+    </div>
       <img class="page-header__name" src="" width="282" height="214" alt="Слоган">
     </header>  
     <main class="page-main">
@@ -69,7 +69,8 @@
         <p class="video_text--title">Все еще сомневаетесь?</p>
         <p class="video_text--description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         <video class="video__item" src="" width="320" height="201" controls poster=""></video>
-      </section>      
+      </section> 
+    </main>     
     <footer class="page-footer">
       <p class="page-footer__hashtag">#Visitsedona</p>
       <div class="page-footer__social social">
