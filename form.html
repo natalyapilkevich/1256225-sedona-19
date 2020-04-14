@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="source/css/style.css" rel="stylesheet">
   </head>
 <body>
   <header class="page-header">
-    <div class="page-header__nav-wrapper">    
-      <nav class="page-header-nav">          
+    <div class="page-header__nav-wrapper">
+      <nav class="page-header-nav">
         <ul class="page-header-nav__list site-list">
           <li class="site-list__item">
             <a href="index.html">Главная</a>
@@ -22,16 +24,16 @@
             <a href="">HTML Academy</a>
           </li>
         </ul>
-      </nav> 
+      </nav>
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="" width="102" height="83" alt="Лого Седоны">
-      </a> 
-      <button class="visually-hidden page-header-nav__toggle" type="button">Открыть меню</button>  
+      </a>
+      <button class="visually-hidden page-header-nav__toggle" type="button">Открыть меню</button>
     </div>
       <img class="page-header__name" src="" width="320" height="389" alt="Слоган">
-    </header>  
+    </header>
     <main class="page-main">
-      <h1 class="page-main__title">Оставьте свой отзыв</h1>  
+      <h1 class="page-main__title">Оставьте свой отзыв</h1>
       <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       <form class="review" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="review__block">
@@ -58,19 +60,19 @@
           <p class="review__item">
             <label for="email">Электронная почта*:</label>
             <input id="email" type="email" name="email" placeholder="Введите e-mail">
-          </p>          
+          </p>
         </fieldset>
         <fieldset class="review__block">
-          <legend class="review__title">Ваше общее впечатление:</legend>  
-            <input type="radio" name="rating" id="rating-good" value="good" checked>          
+          <legend class="review__title">Ваше общее впечатление:</legend>
+            <input type="radio" name="rating" id="rating-good" value="good" checked>
             <label for="rating-good">Скорее положительное</label>
-            <input type="radio" name="rating" id="rating-bad" value="bad">          
+            <input type="radio" name="rating" id="rating-bad" value="bad">
             <label for="rating-bad">Скорее отрицательное</label>
-            <input type="radio" name="rating" id="no-answer" value="no-answer">          
-            <label for="no-answer">Затрудняюсь ответить</label>                    
+            <input type="radio" name="rating" id="no-answer" value="no-answer">
+            <label for="no-answer">Затрудняюсь ответить</label>
         </fieldset>
         <fieldset class="review__block">
-          <legend class="review__title">Посещенные достопримечательности:</legend>  
+          <legend class="review__title">Посещенные достопримечательности:</legend>
             <ul class="sight-list">
               <li class="sight-item">
                 <input type="checkbox" name="sight-bridge" id="sight-bridge" checked>
@@ -88,11 +90,11 @@
                 <input type="checkbox" name="sight-rocks" id="sight-rocks">
                 <label for="sight-rocks">Красные скалы</label>
               </li>
-            </ul>       
+            </ul>
         </fieldset>
         <fieldset class="review__block">
-          <legend class="review__title">Опишите свои эмоции:</legend>  
-            <textarea name="comment" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>             
+          <legend class="review__title">Опишите свои эмоции:</legend>
+            <textarea name="comment" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="review__button button" type="submit">Отправить отзыв</button>
         <section class="popup visually-hidden">
@@ -110,7 +112,7 @@
           <button class="popup__close button" type="button">Закрыть окно</button>
         </section>
       </form>
-    </main>        
+    </main>
     <footer class="page-footer">
       <p class="page-footer__hashtag">#Visitsedona</p>
       <div class="page-footer__social social">
