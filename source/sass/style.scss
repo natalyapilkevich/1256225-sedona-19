@@ -1,0 +1,25 @@
+@import "mixin.scss";
+@import "visually-hidden.scss";
+@import "blocks/page-header.scss";
+@import "blocks/site-list.scss";
+@import "blocks/page-main.scss";
+@import "blocks/advantages.scss";
+@import "blocks/city-list.scss";
+@import "blocks/gallery.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+
+body {
+  margin: 0;
+
+  @include font-face();
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}

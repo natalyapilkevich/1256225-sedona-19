@@ -1,0 +1,80 @@
+.advantages__slogan {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+
+  margin: 0;
+  padding: 40px 30px;
+}
+
+.advantages__topic {
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #333333;
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+}
+
+.advantages__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__item {
+  background-color: #81b3d2;
+}
+
+.advantages__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+
+  margin: 0;
+  padding: 30px 0;
+}
+
+.advantages__description {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+
+  margin: 0;
+  padding: 25px 28px 30px 28px;
+}
+
+.advantages__item--area,
+.advantages__item--road,
+.advantages__item--quietly {
+  background-color: #eeeeee;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.advantages__item--quietly {
+  border-bottom: none;
+}
+
+.advantages__title--area,
+.advantages__title--road,
+.advantages__title--quietly {
+  color: black;
+}
+
+.advantages__description--area,
+.advantages__description--road,
+.advantages__description--quietly {
+  color: #333333;
+}
