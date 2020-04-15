@@ -1,4 +1,5 @@
-@import "mixin.scss";
+@import "mixins.scss";
+@import "fonts.scss";
 @import "visually-hidden.scss";
 @import "blocks/page-header.scss";
 @import "blocks/site-list.scss";
@@ -12,8 +13,7 @@
 
 body {
   margin: 0;
-
-  @include font-face();
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 img {
