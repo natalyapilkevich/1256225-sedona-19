@@ -1,0 +1,70 @@
+.review__block {
+  padding: 18px 20px 20px 40px;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+.review__block fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.review__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.review__item {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.86;
+  text-transform: uppercase;
+  color: #333333;
+  text-align: left;
+
+  margin: 0;
+  padding: 0;
+}
+
+.review__block input::placeholder,
+.review__answers,
+.review__block textarea::placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: black;
+  text-align: left;
+}
+
+.review__sight-list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.review__button {
+  display: block;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.24;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+
+  border: none;
+  width: 280px;
+  margin: 0 auto;
+  padding: 15px 0;
+  background-color: #81b3d2;
+}

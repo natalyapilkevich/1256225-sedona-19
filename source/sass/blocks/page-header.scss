@@ -9,3 +9,18 @@
   margin: 0;
   padding: 0;
 }
+
+.page-header__menu {
+  min-height: 56px;
+  background-color: white;
+}
+
+.page-header__intro {
+  min-height: 389px;
+  background: url("../img/bg-intro-triangle-mobile.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-mobile@1x.jpg") center no-repeat;
+}
+
+.page-header__background {
+  min-height: 389px;
+  background: url("../img/bg-intro-triangle-mobile.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-mobile@1x.jpg") center no-repeat;
+}

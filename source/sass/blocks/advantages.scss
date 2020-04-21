@@ -1,25 +1,31 @@
+.advantages {
+  padding-top: 40px;
+}
+
 .advantages__slogan {
   font-size: 18px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 1.44;
   text-transform: uppercase;
   color: black;
   text-align: center;
 
-  margin: 0;
-  padding: 40px 30px;
+  max-width: 265px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .advantages__topic {
   font-size: 14px;
-  line-height: 26px;
+  font-weight: normal;
+  line-height: 1.75;
   text-transform: uppercase;
   color: #333333;
   text-align: center;
 
-  margin: 0;
-  padding: 0;
-  padding-bottom: 40px;
+  max-width: 265px;
+  margin: 0 auto;
+  padding: 30px 0 10px 0;
 }
 
 .advantages__list {
@@ -33,27 +39,36 @@
   background-color: #81b3d2;
 }
 
+.advantages__item--city {
+  background: #81b3d2 url("../../img/bg-triangle.svg") top no-repeat;
+}
+
 .advantages__title {
   font-size: 18px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 1.44;
   text-transform: uppercase;
   color: white;
   text-align: center;
 
   margin: 0;
-  padding: 30px 0;
+  padding: 28px 0 45px 0;
+}
+
+.advantages__item:first-child {
+  padding: 48px 0 45px 0;
 }
 
 .advantages__description {
   font-size: 14px;
-  line-height: 21px;
+  font-weight: normal;
+  line-height: 1.5;
   text-transform: uppercase;
   color: white;
   text-align: center;
 
   margin: 0;
-  padding: 25px 28px 30px 28px;
+  padding: 0 20px 30px 20px;
 }
 
 .advantages__item--area,
