@@ -68,3 +68,17 @@
   padding: 15px 0;
   background-color: #81b3d2;
 }
+
+@media (min-width: $tablet-width) {
+  .review {
+    width: $tablet-width;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
+}

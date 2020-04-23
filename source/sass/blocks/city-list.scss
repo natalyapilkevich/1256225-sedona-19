@@ -2,7 +2,7 @@
   list-style: none;
 
   margin: 0;
-  padding: 26px 0 0 0;
+  padding: 26px 0 20px 0;
 }
 
 .city-list__item {
@@ -19,7 +19,7 @@
   text-align: left;
 
   margin: 0;
-  padding: 0;
+  padding: 40px 0 20px 70px;
 }
 
 .city-list__description {
@@ -31,5 +31,39 @@
   text-align: left;
 
   margin: 0;
-  padding: 0 0 20px 0;
+  padding: 0 0 20px 70px;
+  max-width: 220px;
+}
+
+@media (min-width: $tablet-width) {
+  .city-list {
+    display: flex;
+    padding: 0;
+  }
+
+  .city-list__item {
+    min-height: 330px;
+    width: 256px;
+  }
+
+  .city-list__title {
+    font-size: 21px;
+    line-height: 1.24;
+    text-align: center;
+    padding: 160px 0 20px 0;
+  }
+
+  .city-list__description {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    max-width: 162px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .city-list__item {
+    min-height: 330px;
+    width: 400px;
+  }
 }

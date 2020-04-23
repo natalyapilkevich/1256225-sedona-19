@@ -1,8 +1,8 @@
 .page-header {
-  max-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding: 0;
-  background-color: white;
+  background-color: #f2f2f2;
 }
 
 .page-header-nav__list {
@@ -11,11 +11,18 @@
 }
 
 .page-header__menu {
+  position: relative;
   min-height: 56px;
   background-color: white;
 }
 
+.page-header__logo {
+  position: absolute;
+}
+
 .page-header__intro {
+  margin: 0 auto;
+  width: 320px;
   min-height: 389px;
   background: url("../img/bg-intro-triangle-mobile.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-mobile@1x.jpg") center no-repeat;
 }
@@ -23,4 +30,63 @@
 .page-header__background {
   min-height: 389px;
   background: url("../img/bg-intro-triangle-mobile.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-mobile@1x.jpg") center no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: auto;
+    margin: 0;
+  }
+
+  .page-header__nav-wrapper {
+    width: $tablet-width;
+    margin: 0 auto;
+  }
+
+  .page-header__menu {
+    min-height: 0;
+  }
+
+  .page-header-nav__toggle {
+    display: none;
+  }
+
+  .page-header__intro {
+    width: $tablet-width;
+    min-height: 518px;
+    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-tablet@1x.jpg") center no-repeat;
+  }
+
+  .page-header__background {
+    width: $tablet-width;
+    margin: 0 auto;
+    min-height: 346px;
+    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-tablet@1x.jpg") center no-repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-header__nav-wrapper {
+    width: $desktop-width;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .page-header__intro {
+    width: $desktop-width;
+    min-height: 518px;
+    background: url("../img/bg-intro-triangle-desktop.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-desktop@1x.jpg") center no-repeat;
+  }
+
+  .page-header__background {
+    width: $desktop-width;
+    min-height: 357px;
+    background: url("../img/bg-intro-triangle-desktop.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-desktop@1x.jpg") center no-repeat;
+  }
 }
