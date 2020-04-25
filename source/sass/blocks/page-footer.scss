@@ -29,17 +29,22 @@
 
   .page-footer__wrapper {
     display: flex;
+    min-height: 120px;
     justify-content: space-between;
     width: $tablet-width;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 60px;
   }
+
+  .page-footer__hashtag {
+    padding-top: 45px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer__wrapper {
-    padding: 0 40px;
+    padding: 0 120px;
     width: $desktop-width;
   }
 }

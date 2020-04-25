@@ -42,3 +42,33 @@
   padding: 15px 0;
   background-color: #81b3d2;
 }
+
+@media (min-width: $tablet-width) {
+  .find-hotel {
+    padding: 53px 0 0 0;
+  }
+
+  .find-hotel__title {
+    font-size: 30px;
+    line-height: 0.87;
+
+    padding: 0 0 32px 0;
+  }
+
+  .find-hotel__description {
+    max-width: 445px;
+    padding: 0 0 45px 0;
+  }
+
+  .find-hotel__button {
+    width: 458px;
+    margin-bottom: 58px;
+    padding: 16px 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .find-hotel__description {
+    padding: 0 0 50px 0;
+  }
+}

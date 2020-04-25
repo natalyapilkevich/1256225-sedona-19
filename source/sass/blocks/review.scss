@@ -21,6 +21,7 @@
 
   margin: 0;
   padding: 0;
+  width: 280px;
 }
 
 .review__item {
@@ -43,6 +44,14 @@
   line-height: 1.44;
   color: black;
   text-align: left;
+}
+
+.review__answers {
+  padding-left: 50px;
+}
+
+.review__block input {
+  margin-top: 20px;
 }
 
 .review__sight-list {
@@ -69,10 +78,107 @@
   background-color: #81b3d2;
 }
 
+.review__note {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .review {
+    display: flex;
+    flex-wrap: wrap;
     width: $tablet-width;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding: 60px;
+  }
+
+  .review__block {
+    padding: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .review__block fieldset {
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .review__title {
+    font-size: 21px;
+    line-height: 1.24;
+    padding: 58px 0;
+  }
+
+  .review__block--introduce,
+  .review__block--rating {
+    max-width: 50%;
+  }
+
+  .review__block--introduce fieldset,
+  .review__block--rating fieldset {
+    border: none;
+  }
+
+  .review__block--introduce .review__title,
+  .review__block--rating .review__title {
+    text-align: left;
+  }
+
+  .review__block--introduce fieldset {
+    border-left: 1px solid #dbdbdb;
+    padding-left: 55px;
+  }
+
+  .review__block--rating {
+    order: -1;
+  }
+
+  .review__sight-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .review__sight-item {
+    width: 50%;
+  }
+
+  .review__block--contacts input {
+    width: 100%;
+  }
+
+  .review__item input {
+    min-height: 58px;
+    background-color: #f2f2f2;
+    border: none;
+  }
+
+  .review__block textarea {
+    width: 100%;
+    min-height: 160px;
+    background-color: #f2f2f2;
+    border: none;
+  }
+
+  .review__note {
+    display: inline;
+    line-height: 58px;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333333;
+    text-align: center;
+  }
+
+  .review__wrapper-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 58px 0 0 0;
+  }
+
+  .review__button {
+    width: 324px;
+    margin: 0;
+    padding: 16px 0;
   }
 }
 
@@ -80,5 +186,22 @@
   .review {
     width: $desktop-width;
     margin: 0 auto;
+    padding: 60px 120px;
+  }
+
+  .review__block--contacts .review__item-wrapper {
+    display: flex;
+  }
+
+  .review__block--contacts .review__item {
+    width: 50%;
+  }
+
+  .review__sight-list {
+    flex-wrap: nowrap;
+  }
+
+  .review__button {
+    width: 480px;
   }
 }
