@@ -26,7 +26,7 @@
   text-align: center;
 
   margin: 0;
-  padding: 0;
+  padding: 0 0 15px 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -38,5 +38,10 @@
   .page-main__title {
     font-size: 30px;
     line-height: 0.87;
+  }
+
+  .page-main__text {
+    max-width: 440px;
+    margin: 0 auto;
   }
 }

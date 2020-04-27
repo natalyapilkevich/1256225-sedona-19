@@ -66,7 +66,7 @@
   text-align: center;
 
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 30px 0;
   max-width: 270px;
 }
 
@@ -190,7 +190,7 @@
   .advantages {
     width: $desktop-width;
     margin: 0 auto;
-    padding: 44px;
+    padding-top: 44px;
   }
 
   .advantages__item--area,
