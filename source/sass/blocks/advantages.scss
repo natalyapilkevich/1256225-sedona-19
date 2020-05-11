@@ -26,7 +26,7 @@
 
   max-width: 265px;
   margin: 0 auto;
-  padding: 30px 0 10px 0;
+  padding: 30px 0 8px 0;
 }
 
 .advantages__list {
@@ -34,14 +34,16 @@
 
   margin: 0;
   padding: 0;
+  background-color: #eeeeee;
 }
 
 .advantages__wrapper {
+  padding: 38px 0 41px 0;
   background-color: #81b3d2;
 }
 
 .advantages__item:first-child .advantages__wrapper {
-  padding: 48px 0 0 0;
+  padding-top: 78px;
   background: #81b3d2 url("../img/bg-triangle.svg") top no-repeat;
 }
 
@@ -54,7 +56,19 @@
   text-align: center;
 
   margin: 0;
-  padding: 28px 0 45px 0;
+  padding: 0;
+}
+
+.advantages__number {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+
+  margin: 0 auto;
+  padding: 10px 0 14px 0;
 }
 
 .advantages__description {
@@ -66,26 +80,29 @@
   text-align: center;
 
   margin: 0 auto;
-  padding: 0 0 30px 0;
+  padding: 0;
   max-width: 270px;
 }
 
 .advantages__image {
-  min-height: 260px;
+  height: 260px;
 }
 
 .advantages__image--city {
   background: url("../img/main-city-mobile@1x.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .advantages__image--bridge {
   background: url("../img/main-bridge-mobile@1x.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .advantages__item--area,
 .advantages__item--road,
 .advantages__item--quietly {
-  background-color: #eeeeee;
+  margin: 0 20px;
+  padding: 27px 0;
   border-bottom: 1px solid #d6d6d6;
 }
 
@@ -99,6 +116,12 @@
   color: black;
 }
 
+.advantages__item--area .advantages__number,
+.advantages__item--road .advantages__number,
+.advantages__item--quietly .advantages__number {
+  color: #333333;
+}
+
 .advantages__description--area,
 .advantages__description--road,
 .advantages__description--quietly {
@@ -108,13 +131,14 @@
 
 @media (min-width: $tablet-width) {
   .advantages {
-    width: $tablet-width;
+    width: 100%;
     margin: 0 auto;
-    padding-top: 45px;
+    padding: 49px 0 0 0;
   }
 
   .advantages__slogan {
     font-size: 21px;
+    line-height: 1.3;
     max-width: 510px;
   }
 
@@ -127,7 +151,7 @@
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 38px;
+    margin-top: 44px;
   }
 
   .advantages__title {
@@ -138,51 +162,68 @@
   .advantages__item--area,
   .advantages__item--road,
   .advantages__item--quietly {
-    width: 256px;
+    box-sizing: border-box;
+    width: 33.3%;
     min-height: 256px;
+    margin: 0;
+    padding: 45px 48px 40px 48px;
   }
 
   .advantages__item:first-child .advantages__wrapper {
-    padding: 0;
     background: #81b3d2;
+    padding-top: 44px;
+  }
+
+  .advantages__item--bridge .advantages__wrapper {
+    background: #81b3d2;
+    padding-top: 38px;
+    order: 2;
+  }
+
+  .advantages__wrapper {
+    padding: 0;
+    width: 33.3%;
+  }
+
+  .advantages__number {
+    padding: 10px 0 22px 0;
   }
 
   .advantages__item--city,
   .advantages__item--bridge {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .advantages__image {
-    width: 512px;
-    min-height: 256px;
+    width: 66.7%;
+    height: 256px;
   }
 
   .advantages__image--city {
     background: url("../img/main-city-tablet@1x.jpg") center no-repeat;
-  }
-
-  .advantages__wrapper {
-    width: 256px;
+    background-size: cover;
   }
 
   .advantages__image--bridge {
     background: url("../img/main-bridge-tablet@1x.jpg") center no-repeat;
+    background-size: cover;
     order: 1;
   }
 
-  .advantages__item--bridge .advantages__wrapper {
-    order: 2;
-  }
-
-  .advantages__description--area,
-  .advantages__description--road,
-  .advantages__description--quietly {
-    width: 256px;
+  .advantages__item--bridge .advantages__title {
+    max-width: 150px;
+    margin: 0 auto;
+    padding-top: 8px;
   }
 
   .advantages__item--quietly {
     border-bottom: 1px solid #d6d6d6;
+  }
+
+  .advantages__description {
+    max-width: 165px;
   }
 }
 
@@ -190,13 +231,21 @@
   .advantages {
     width: $desktop-width;
     margin: 0 auto;
-    padding-top: 44px;
+  }
+
+  .advantages__topic {
+    padding-top: 30px;
+  }
+
+  .advantages__list {
+    margin-top: 41px;
   }
 
   .advantages__item--area,
   .advantages__item--road,
   .advantages__item--quietly {
-    width: 400px;
+    width: 33.3%;
+    padding: 45px 0;
   }
 
   .advantages__image {
@@ -209,15 +258,33 @@
 
   .advantages__wrapper {
     width: 400px;
+    flex-grow: 0;
+  }
+
+  .advantages__title {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .advantages__item--city .advantages__title {
+    padding-top: 10px;
+  }
+
+  .advantages__item--bridge .advantages__title {
+    padding-top: 16px;
   }
 
   .advantages__image--bridge {
     background: url("../img/main-bridge-desktop@1x.jpg") center no-repeat;
   }
 
+  .advantages__description {
+    max-width: 280px;
+  }
+
   .advantages__description--area,
   .advantages__description--road,
   .advantages__description--quietly {
-    width: 400px;
+    max-width: 300px;
   }
 }

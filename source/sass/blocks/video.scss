@@ -1,6 +1,9 @@
 .video {
   box-sizing: border-box;
-  padding: 35px 0 49px 0;
+  height: 497px;
+  /*padding: 35px 0 49px 0;*/
+  border-top: 1px solid #e5e5e5;
+  background-color: tomato;
 }
 
 .video__title {
@@ -12,7 +15,7 @@
   text-align: center;
 
   margin: 0;
-  padding-bottom: 30px;
+  padding: 0;
 }
 
 .video__description {
@@ -25,14 +28,16 @@
 
   max-width: 265px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding: 0;
 }
 
 @media (min-width: $tablet-width) {
   .video {
+    box-sizing: border-box;
+    height: 784px;
     width: $tablet-width;
     margin: 0 auto;
-    padding: 60px 60px 40px 60px;
+    /*padding: 60px 60px 40px 60px;*/
   }
 
   .video__title {
@@ -45,5 +50,13 @@
   .video__description {
     max-width: 415px;
     padding-bottom: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    box-sizing: border-box;
+    height: 831px;
+    width: $desktop-width;
   }
 }
