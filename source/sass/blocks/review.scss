@@ -1,7 +1,6 @@
 .review__block {
-  padding: 18px 20px 20px 40px;
-
   border-top: 1px solid #e5e5e5;
+  padding: 17px 20px 22px 20px;
 }
 
 .review__block fieldset {
@@ -21,19 +20,22 @@
 
   margin: 0;
   padding: 0;
-  width: 280px;
 }
 
 .review__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.review__item label {
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.86;
+  line-height: 58px;
   text-transform: uppercase;
   color: #333333;
-  text-align: left;
-
-  margin: 0;
-  padding: 0;
+  margin-right: 15px;
 }
 
 .review__block input::placeholder,
@@ -44,14 +46,70 @@
   line-height: 1.44;
   color: black;
   text-align: left;
+  padding-left: 20px;
 }
 
 .review__answers {
   padding-left: 50px;
 }
 
-.review__block input {
-  margin-top: 20px;
+.review__item input {
+  min-height: 58px;
+  background-color: #f2f2f2;
+  border: none;
+  flex-grow: 1;
+}
+
+.review__block--contacts {
+  padding-bottom: 26px;
+}
+
+.review__block--contacts .review__title {
+  margin-bottom: 10px;
+}
+
+.review__block--contacts .review__item {
+  margin: 0;
+}
+
+.review__item--mobile label,
+.review__item--mail label {
+  line-height: 1.86;
+  margin: 10px 0 8px 21px;
+}
+
+.review__item--mobile,
+.review__item--mail {
+  position: relative;
+}
+
+.review__item--mobile::after,
+.review__item--mail::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #e6e6e6;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+}
+
+.review__item--mobile::after {
+  background-position: center;
+  background-image: url("../img/icon-phone.svg");
+}
+
+.review__item--mail::after {
+  background-image: url("../img/icon-mail.svg");
+}
+
+.review__block textarea {
+  width: 100%;
+  min-height: 160px;
+  background-color: #f2f2f2;
+  border: none;
 }
 
 .review__sight-list {
@@ -143,19 +201,6 @@
 
   .review__block--contacts input {
     width: 100%;
-  }
-
-  .review__item input {
-    min-height: 58px;
-    background-color: #f2f2f2;
-    border: none;
-  }
-
-  .review__block textarea {
-    width: 100%;
-    min-height: 160px;
-    background-color: #f2f2f2;
-    border: none;
   }
 
   .review__note {
