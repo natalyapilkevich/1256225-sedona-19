@@ -2,12 +2,13 @@
   list-style: none;
 
   margin: 0;
-  padding: 26px 0 20px 0;
+  padding: 20px 0 27px 0;
+  background-color: white;
 }
 
 .city-list__item {
-  background-color: white;
-  padding: 0;
+  position: relative;
+  padding: 15px 0 10px 0;
 }
 
 .city-list__title {
@@ -19,7 +20,7 @@
   text-align: left;
 
   margin: 0;
-  padding: 40px 0 20px 70px;
+  padding: 0 0 17px 70px;
 }
 
 .city-list__description {
@@ -31,39 +32,111 @@
   text-align: left;
 
   margin: 0;
-  padding: 0 0 20px 70px;
+  padding: 0 0 0 70px;
   max-width: 220px;
+}
+
+.city-list__title::before {
+  content: "";
+  position: absolute;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.city-list__item--motel .city-list__title::before {
+  top: 5px;
+  left: 21px;
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-house.svg");
+}
+
+.city-list__item--souvenir .city-list__title::before {
+  top: 5px;
+  left: 24px;
+  width: 32px;
+  height: 38px;
+  background-image: url("../img/icon-gift.svg");
+}
+
+.city-list__item--food .city-list__title::before {
+  top: 10px;
+  left: 19px;
+  width: 40px;
+  height: 35px;
+  background-image: url("../img/icon-burger.svg");
 }
 
 @media (min-width: $tablet-width) {
   .city-list {
     display: flex;
-    padding: 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    height: 330px;
+    padding: 145px 44px 60px 44px;
   }
 
-  .city-list__item {
-    min-height: 330px;
-    width: 256px;
+  .city-list__item--souvenir {
+    order: 2;
   }
 
   .city-list__title {
     font-size: 21px;
     line-height: 1.24;
     text-align: center;
-    padding: 160px 0 20px 0;
+    padding: 0 0 20px 0;
   }
 
   .city-list__description {
     margin: 0 auto;
     padding: 0;
     text-align: center;
-    max-width: 162px;
+    max-width: 166px;
+  }
+
+  .city-list__item--motel .city-list__title::before {
+    margin: auto;
+    top: -85px;
+    left: 0;
+    right: 0;
+    width: 75px;
+    height: 72px;
+  }
+
+  .city-list__item--souvenir .city-list__title::before {
+    margin: auto;
+    top: -85px;
+    left: 0;
+    right: 0;
+    width: 64px;
+    height: 75px;
+  }
+
+  .city-list__item--food .city-list__title::before {
+    margin: auto;
+    top: -85px;
+    left: 0;
+    right: 0;
+    width: 77px;
+    height: 68px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .city-list {
+    width: $desktop-width;
+    height: 330px;
+    padding: 145px 0 0 0;
+  }
+
   .city-list__item {
     min-height: 330px;
     width: 400px;
+  }
+
+  .city-list__description {
+    max-width: 285px;
   }
 }

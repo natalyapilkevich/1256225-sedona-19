@@ -1,0 +1,26 @@
+.br--tablet,
+.br--desktop {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .br--mobile,
+  .br--desktop {
+    display: none;
+  }
+
+  .br--tablet {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .br--mobile,
+  .br--tablet {
+    display: none;
+  }
+
+  .br--desktop {
+    display: inline;
+  }
+}

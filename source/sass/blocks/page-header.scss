@@ -1,5 +1,5 @@
 .page-header {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   background-color: #f2f2f2;
@@ -12,56 +12,132 @@
 
 .page-header__menu {
   position: relative;
-  min-height: 56px;
   background-color: white;
+  order: -1;
+  min-height: 56px;
 }
 
 .page-header__logo {
+  background-color: transparent;
   position: absolute;
+  min-height: 0;
+  top: 0;
+  left: 50%;
+  width: 102px;
+  margin-left: -51px;
+}
+
+.page-header__image--tablet,
+.page-header__image--desktop {
+  display: none;
 }
 
 .page-header__intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  width: 320px;
+  width: 100%;
+  min-height: 158px;
+}
+
+.page-header__intro-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 229px;
+  margin-bottom: 16px;
+}
+
+.page-header__intro--index {
   min-height: 389px;
   background: url("../img/bg-intro-triangle-mobile.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-mobile@1x.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.page-header__intro-wrapper--index {
+  width: 281px;
+  margin-bottom: 0;
 }
 
 .page-header__background {
-  min-height: 437px;
+  width: 100%;
   background: url("../img/bg-intro-triangle-mobile.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-mobile@1x.jpg") bottom no-repeat;
+  background-size: auto;
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
-    width: auto;
+    width: 100%;
     margin: 0;
   }
 
   .page-header__nav-wrapper {
-    width: $tablet-width;
+    position: relative;
+    width: 100%;
     margin: 0 auto;
   }
 
+  .page-header-nav {
+    width: 100%;
+  }
+
   .page-header__menu {
+    background-color: transparent;
     min-height: 0;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: -56px;
+    left: 50%;
+    width: 102px;
+    margin-left: -51px;
   }
 
   .page-header-nav__toggle {
     display: none;
   }
 
+  .page-header__image--mobile,
+  .page-header__image--desktop {
+    display: none;
+  }
+
+  .page-header__image--tablet {
+    display: block;
+  }
+
   .page-header__intro {
-    width: $tablet-width;
-    min-height: 518px;
-    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-tablet@1x.jpg") center no-repeat;
+    min-height: 290px;
+  }
+
+  .page-header__intro-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    margin-bottom: 18px;
+  }
+
+  .page-header__intro--index {
+    margin: 0 auto;
+    height: 518px;
+    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, url("../img/bg-back-tablet@1x.jpg") center no-repeat;
+    background-size: auto, cover;
+  }
+
+  .page-header__intro-wrapper--index {
+    margin-bottom: 14px;
+    width: 460px;
   }
 
   .page-header__background {
-    width: $tablet-width;
+    width: 100%;
     margin: 0 auto;
     min-height: 346px;
-    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-tablet@1x.jpg") center no-repeat;
+    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-tablet@1x.jpg") bottom no-repeat;
+    background-size: auto, cover;
   }
 }
 
@@ -78,15 +154,37 @@
     padding: 0;
   }
 
+  .page-header__logo {
+    width: 186px;
+    margin-left: -93px;
+  }
+
+  .page-header__image--mobile,
+  .page-header__image--tablet {
+    display: none;
+  }
+
+  .page-header__image--desktop {
+    display: block;
+  }
+
   .page-header__intro {
+    min-height: 301px;
+  }
+
+  .page-header__intro--index {
     width: $desktop-width;
     min-height: 518px;
     background: url("../img/bg-intro-triangle-desktop.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-desktop@1x.jpg") center no-repeat;
   }
 
+  .page-header__intro-wrapper--index {
+    margin-bottom: 12px;
+  }
+
   .page-header__background {
     width: $desktop-width;
     min-height: 357px;
-    background: url("../img/bg-intro-triangle-desktop.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-desktop@1x.jpg") center no-repeat;
+    background: url("../img/bg-intro-triangle-desktop.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-desktop@1x.jpg") bottom no-repeat;
   }
 }

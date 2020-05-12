@@ -1,6 +1,41 @@
 .social__list {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 
   margin: 0;
   padding: 0;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  text-align: center;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.social__link svg {
+  fill: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    width: 150px;
+    margin-left: -6px;
+  }
 }
