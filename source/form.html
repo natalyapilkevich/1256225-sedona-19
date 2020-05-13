@@ -10,7 +10,7 @@
   <header class="page-header">
     <div class="page-header__background">
       <div class="page-header__nav-wrapper">
-        <nav class="page-header-nav page-header-nav--closed page-header-nav--nojs">
+        <nav class="page-header-nav page-header-nav--opened page-header-nav--nojs">
           <ul class="page-header-nav__list site-list">
               <li class="site-list__item">
                 <a href="index.html">Главная</a>
@@ -502,7 +502,7 @@
     <main class="page-main">
       <h1 class="page-main__title">Оставьте свой отзыв</h1>
       <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      <form class="review" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="page-main__review review" action="https://echo.htmlacademy.ru/" method="post">
       <div class="review__block review__block--introduce">
         <fieldset>
           <legend class="review__title">Представьтесь:</legend>
@@ -524,11 +524,11 @@
         <fieldset>
           <legend class="review__title">Контактная информация:</legend>
           <div class="review__item-wrapper">
-            <p class="review__item">
+            <p class="review__item review__item--mobile">
               <label for="phone">Контактный телефон*:</label>
               <input id="phone" type="tel" name="phone" placeholder="Введите телефон">
             </p>
-            <p class="review__item">
+            <p class="review__item review__item--mail">
               <label for="email">Электронная почта*:</label>
               <input id="email" type="email" name="email" placeholder="Введите e-mail">
             </p>
@@ -538,39 +538,39 @@
         <div class="review__block review__block--rating">
         <fieldset>
           <legend class="review__title">Ваше общее впечатление:</legend>
-            <p>
-              <input type="radio" name="rating" id="rating-good" value="good" checked>
+            <p class="review__option">
+              <input class="review__option-input visually-hidden" type="radio" name="rating" id="rating-good" value="good" checked>
               <label class="review__answers" for="rating-good">Скорее положительное</label>
             </p>
-            <p>
-              <input type="radio" name="rating" id="rating-bad" value="bad">
+            <p class="review__option">
+              <input class="review__option-input visually-hidden" type="radio" name="rating" id="rating-bad" value="bad">
               <label class="review__answers" for="rating-bad">Скорее отрицательное</label>
             </p>
-            <p>
-              <input type="radio" name="rating" id="no-answer" value="no-answer">
+            <p class="review__option">
+              <input class="review__option-input visually-hidden" type="radio" name="rating" id="no-answer" value="no-answer">
               <label class="review__answers" for="no-answer">Затрудняюсь ответить</label>
             </p>
         </fieldset>
         </div>
         <div class="review__block">
         <fieldset>
-          <legend class="review__title">Посещенные достопримечательности:</legend>
+          <legend class="review__title">Посещенные <br class="br--mobile br--tablet">достопримечательности:</legend>
             <ul class="review__sight-list">
               <li class="review__sight-item">
-                <input type="checkbox" name="sight-bridge" id="sight-bridge" checked>
-                <label class="review__answers" for="sight-bridge">Мост Дьявола</label>
+                <input class="review__option-input visually-hidden" type="checkbox" name="sight-bridge" id="sight-bridge" checked>
+                <label class="review__answers review__answers--sight" for="sight-bridge">Мост Дьявола</label>
               </li>
               <li class="review__sight-item">
-                <input type="checkbox" name="sight-mount" id="sight-mount" checked>
-                <label class="review__answers" for="sight-mount">Гора-Колокол</label>
+                <input class="review__option-input visually-hidden" type="checkbox" name="sight-mount" id="sight-mount" checked>
+                <label class="review__answers review__answers--sight" for="sight-mount">Гора-Колокол</label>
               </li>
               <li class="review__sight-item">
-                <input type="checkbox" name="sight-park" id="sight-park" checked>
-                <label class="review__answers" for="sight-park">Слайд-парк</label>
+                <input class="review__option-input visually-hidden" type="checkbox" name="sight-park" id="sight-park" checked>
+                <label class="review__answers review__answers--sight" for="sight-park">Слайд-парк</label>
               </li>
               <li class="review__sight-item">
-                <input type="checkbox" name="sight-rocks" id="sight-rocks">
-                <label class="review__answers" for="sight-rocks">Красные скалы</label>
+                <input class="review__option-input visually-hidden" type="checkbox" name="sight-rocks" id="sight-rocks">
+                <label class="review__answers review__answers--sight" for="sight-rocks">Красные скалы</label>
               </li>
             </ul>
         </fieldset>
