@@ -6,7 +6,6 @@
 .review__block fieldset {
   margin: 0;
   padding: 0;
-
   border: none;
 }
 
@@ -29,24 +28,43 @@
   padding: 0;
 }
 
+.review__block--introduce .review__item {
+  flex-wrap: nowrap;
+  margin-top: 22px;
+}
+
 .review__item label {
   font-size: 14px;
   font-weight: normal;
   line-height: 58px;
   text-transform: uppercase;
   color: #333333;
+}
+
+.review__block--introduce label {
   margin-right: 15px;
 }
 
+.review__block--introduce input {
+  max-width: 200px;
+}
+
+.review__block input,
 .review__block input::placeholder,
 .review__answers,
+.review__block textarea,
 .review__block textarea::placeholder {
+  box-sizing: border-box;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
   color: black;
   text-align: left;
   padding-left: 20px;
+}
+
+.review__block--introduce input::placeholder {
+  padding-left: 0;
 }
 
 .review__block textarea::placeholder {
@@ -63,16 +81,26 @@
   min-height: 58px;
   background-color: #f2f2f2;
   border: none;
-  flex-grow: 1;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+  }
 }
 
 .review__item--mobile input,
 .review__item--mail input {
-  min-width: 250px;
+  width: 100%;
+  padding-left: 0;
 }
 
 .review__block--contacts {
-  padding-bottom: 26px;
+  padding-bottom: 28px;
 }
 
 .review__block--contacts .review__title {
@@ -140,6 +168,24 @@
   border-radius: 50%;
 }
 
+.review__option-input + .review__answers:hover::before {
+  background-color: #e5e5e5;
+}
+
+.review__option-input + .review__answers:active::before {
+  background-color: #d5d5d5;
+}
+
+.review__option-input:checked + .review__answers:hover::before {
+  background: #333333;
+  border: 16px solid #e5e5e5;
+}
+
+.review__option-input:checked + .review__answers:active::before {
+  background: #a4a4a4;
+  border: 16px solid #d5d5d5;
+}
+
 .review__sight-item .review__answers::before {
   border-radius: 0;
 }
@@ -156,6 +202,22 @@
   background-position: center;
 }
 
+.review__option-input:checked + .review__answers--sight:hover::before {
+  background: #e5e5e5;
+  border: 16px solid #e5e5e5;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.review__option-input:checked + .review__answers--sight:active::before {
+  background: #d5d5d5;
+  border: 16px solid #d5d5d5;
+  background-image: url("../img/icon-tick--op0.3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .review__option,
 .review__sight-item {
   margin: 22px 0 44px 0;
@@ -166,6 +228,7 @@
 }
 
 .review__block--rating {
+  padding-top: 20px;
   padding-bottom: 1px;
 }
 
@@ -175,6 +238,17 @@
   background-color: #f2f2f2;
   border: none;
   margin-top: 18px;
+  padding: 2px 0 0 0;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+  }
 }
 
 .review__sight-list {
@@ -193,7 +267,7 @@
 }
 
 .review__wrapper-button {
-  margin: 23px 0 34px 0;
+  margin: 26px 0 34px 0;
 }
 
 .review__button {
@@ -209,8 +283,21 @@
   border: none;
   width: 280px;
   margin: 0 auto;
-  padding: 15px 0 17px 0;
+  padding: 15px 0 17px 20px;
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #669ec0;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 .review__note {
@@ -243,6 +330,10 @@
     padding: 59px 0 37px 0;
   }
 
+  .review__block--introduce .review__item {
+    margin-top: 21px;
+  }
+
   .review__block--contacts {
     margin-top: 20px;
   }
@@ -256,12 +347,34 @@
     margin: 19px 0 0 0;
   }
 
+  .review__item-wrapper .review__item--mobile {
+    margin-bottom: 12px;
+  }
+
+  .review__item--mobile input,
+  .review__item--mail input {
+    min-width: 648px;
+  }
+
+  .review__item--mobile label,
+  .review__item--mail label {
+    margin: 10px 0 6px 21px;
+  }
+
   .review__block--rating .review__option {
     margin: 22px 0 52px 0;
   }
 
+  .review__block--sight .review__title {
+    padding: 52px 0 37px 0;
+  }
+
+  .review__answers {
+    padding: 12px 0 11px 75px;
+  }
+
   .review__answers--sight {
-    padding-left: 76px;
+    padding-left: 78px;
   }
 
   .review__block--introduce,
@@ -291,8 +404,13 @@
   .review__sight-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0;
-    padding: 18px 96px 20px;
+    padding: 18px 30px 0 96px;
+  }
+
+  .review__block--text .review__title {
+    padding: 22px 0 37px 0;
   }
 
   .review__sight-list .review__sight-item {
@@ -302,6 +420,10 @@
 
   .review__block--contacts input {
     width: 100%;
+  }
+
+  .review__block textarea {
+    padding: 3px 0 0 3px;
   }
 
   .review__note {
@@ -324,7 +446,7 @@
   .review__button {
     width: 324px;
     margin: 0;
-    padding: 16px 0;
+    padding: 16px 0 16px 15px;
   }
 }
 
@@ -332,19 +454,76 @@
   .review {
     width: $desktop-width;
     margin: 0 auto;
-    padding: 60px 120px;
+    padding: 16px 120px 66px 120px;
+  }
+
+  .review__title {
+    padding: 30px 0 34px 0;
+  }
+
+  .review__block--introduce fieldset {
+    padding-left: 77px;
+  }
+
+  .review__block--introduce input {
+    flex-grow: 1;
+  }
+
+  .review__block--introduce .review__item {
+    margin-top: 22px;
+  }
+
+  .review__extra-word {
+    display: none;
   }
 
   .review__block--contacts .review__item-wrapper {
     display: flex;
+    margin-top: 60px;
   }
 
   .review__block--contacts .review__item {
+    flex-wrap: nowrap;
+    align-items: center;
     width: 50%;
+  }
+
+  .review__item-wrapper .review__item--mobile {
+    margin: 0;
+  }
+
+  .review__item--mobile label,
+  .review__item--mail label {
+    margin: 0 14px 0 0;
+    width: auto;
+  }
+
+  .review__item--mobile input,
+  .review__item--mail input {
+    min-width: 315px;
+    width: 315px;
+    box-sizing: border-box;
+  }
+
+  .review__item--mobile::after {
+    right: 80px;
+  }
+
+  .review__block--rating .review__title {
+    margin-left: 80px;
   }
 
   .review__sight-list {
     flex-wrap: nowrap;
+    padding: 19px 0 0 0;
+  }
+
+  .review__sight-list .review__sight-item {
+    width: auto;
+  }
+
+  .review__wrapper-button {
+    margin-top: 54px;
   }
 
   .review__button {

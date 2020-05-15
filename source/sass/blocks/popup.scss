@@ -1,6 +1,10 @@
 .popup {
-  margin: 0 auto;
+  display: none;
   padding: 60px 52px 35px 52px;
+  background-color: white;
+  position: fixed;
+  top: 100px;
+  z-index: 1;
 }
 
 .popup__title {
@@ -23,7 +27,7 @@
   color: #333333;
   text-align: center;
 
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
 }
 
@@ -41,9 +45,40 @@
   background-color: #81b3d2;
   width: 180px;
   border: none;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #669ec0;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+.popup__show {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
+  .popup--success {
+    left: calc(50% - 320px);
+    width: 640px;
+    box-sizing: border-box;
+    padding: 40px 90px;
+  }
+
+  .popup--denied {
+    left: calc(50% - 200px);
+    width: 400px;
+    box-sizing: border-box;
+    padding: 60px 64px 49px 64px;
+  }
+
   .popup__title {
     font-size: 30px;
     line-height: 0.87;
@@ -55,21 +90,9 @@
     line-height: 1.24;
   }
 
-  .popup--success {
-    width: 640px;
-    box-sizing: border-box;
-    padding: 40px 90px;
-  }
-
   .popup--success .popup__close {
     margin-top: 70px;
     width: 458px;
-  }
-
-  .popup--denied {
-    width: 400px;
-    box-sizing: border-box;
-    padding: 60px 64px 49px 64px;
   }
 
   .popup--denied .popup__close {

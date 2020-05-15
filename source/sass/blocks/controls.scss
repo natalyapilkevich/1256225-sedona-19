@@ -1,0 +1,85 @@
+.controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 66px;
+  background-color: #f2f2f2;
+}
+
+.controls__button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.controls__button--replay {
+  margin-left: 8.9%;
+}
+
+.controls__button--subtitles {
+  margin-left: 47.5%;
+}
+
+.controls__button--fullscreen {
+  margin-left: 11.07%;
+}
+
+.controls__button svg {
+  fill: #5c6870;
+}
+
+.controls__button:hover svg {
+  fill: #333333;
+}
+
+.controls__button:active svg {
+  fill: #333333;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .controls {
+    position: absolute;
+    width: 648px;
+    bottom: 52px;
+    background-color: transparent;
+  }
+
+  .controls__button--replay {
+    margin-left: 35px;
+  }
+
+  .controls__button--subtitles {
+    margin-left: 473px;
+  }
+
+  .controls__button--fullscreen {
+    margin-left: 31px;
+  }
+
+  .controls__button svg {
+    fill: #ffffff;
+  }
+
+  .controls__button:hover svg {
+    opacity: 0.6;
+  }
+
+  .controls__button:active svg {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .controls {
+    left: 199px;
+    width: 800px;
+    bottom: 99px;
+  }
+
+  .controls__button--subtitles {
+    margin-left: 624px;
+  }
+}

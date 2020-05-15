@@ -10,7 +10,7 @@
   <header class="page-header">
     <div class="page-header__background">
       <div class="page-header__nav-wrapper">
-        <nav class="page-header-nav page-header-nav--opened page-header-nav--nojs">
+        <nav class="page-header-nav page-header-nav--closed page-header-nav--nojs">
           <ul class="page-header-nav__list site-list">
               <li class="site-list__item">
                 <a href="index.html">Главная</a>
@@ -502,21 +502,21 @@
     <main class="page-main">
       <h1 class="page-main__title">Оставьте свой отзыв</h1>
       <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      <form class="page-main__review review" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="page-main__review review" action="https://echo.htmlacademy.ru/" method="post" novalidate>
       <div class="review__block review__block--introduce">
         <fieldset>
           <legend class="review__title">Представьтесь:</legend>
           <p class="review__item">
             <label for="name">Имя*:</label>
-            <input id="name" type="text" name="name" placeholder="Петр">
+            <input id="name" type="text" name="name" placeholder="Петр" required>
           </p>
           <p class="review__item">
             <label for="lastname">Фамилия*:</label>
-            <input id="lastname" type="text" name="lastname" placeholder="Иванов">
+            <input id="lastname" type="text" name="lastname" placeholder="Иванов" required>
           </p>
           <p class="review__item">
             <label for="patronymic">Отчество:</label>
-            <input id="patronymic" type="text" name="patronymic" placeholder="Александрович">
+            <input id="patronymic" type="text" name="patronymic" placeholder="Александрович" required>
           </p>
         </fieldset>
         </div>
@@ -525,12 +525,12 @@
           <legend class="review__title">Контактная информация:</legend>
           <div class="review__item-wrapper">
             <p class="review__item review__item--mobile">
-              <label for="phone">Контактный телефон*:</label>
-              <input id="phone" type="tel" name="phone" placeholder="Введите телефон">
+              <label for="phone"><span class="review__extra-word">Контактный</span> телефон*:</label>
+              <input id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
             </p>
             <p class="review__item review__item--mail">
               <label for="email">Электронная почта*:</label>
-              <input id="email" type="email" name="email" placeholder="Введите e-mail">
+              <input id="email" type="email" name="email" placeholder="Введите e-mail" required>
             </p>
           </div>
         </fieldset>
@@ -552,9 +552,9 @@
             </p>
         </fieldset>
         </div>
-        <div class="review__block">
+        <div class="review__block review__block--sight">
         <fieldset>
-          <legend class="review__title">Посещенные <br class="br--mobile br--tablet">достопримечательности:</legend>
+          <legend class="review__title">Посещенные <br class="br--mobile br--tablet br--desktop">достопримечательности:</legend>
             <ul class="review__sight-list">
               <li class="review__sight-item">
                 <input class="review__option-input visually-hidden" type="checkbox" name="sight-bridge" id="sight-bridge" checked>
@@ -575,7 +575,7 @@
             </ul>
         </fieldset>
         </div>
-        <div class="review__block">
+        <div class="review__block review__block--text">
         <fieldset>
           <legend class="review__title">Опишите свои эмоции:</legend>
           <textarea name="comment" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
@@ -585,19 +585,19 @@
           <button class="review__button button" type="submit">Отправить отзыв</button>
           <span class="review__note">* — обязательные поля</span>
         </div>
-        <section class="popup popup--denied visually-hidden">
+        <section class="popup popup--denied">
           <h2 class="popup__title">Что-то пошло не так!</h2>
           <p class="popup__description">
             Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
           </p>
-          <button class="popup__close button" type="button">OK</button>
+          <button class="popup__close popup__close--denied button" type="button">OK</button>
         </section>
-        <section class="popup popup--success visually-hidden">
+        <section class="popup popup--success">
           <h2 class="popup__title">Ваш отзыв отправлен!</h2>
           <p class="popup__description">
             Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
           </p>
-          <button class="popup__close button" type="button">Закрыть окно</button>
+          <button class="popup__close popup__close--success button" type="button">Закрыть окно</button>
         </section>
       </form>
     </main>
