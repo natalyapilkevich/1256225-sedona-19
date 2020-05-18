@@ -91,11 +91,19 @@
 .advantages__image--city {
   background: url("../img/main-city-mobile@1x.jpg") center no-repeat;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/main-city-mobile@2x.jpg") center no-repeat;
+  }
 }
 
 .advantages__image--bridge {
   background: url("../img/main-bridge-mobile@1x.jpg") center no-repeat;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/main-bridge-mobile@2x.jpg") center no-repeat;
+  }
 }
 
 .advantages__item--area,
@@ -204,12 +212,20 @@
   .advantages__image--city {
     background: url("../img/main-city-tablet@1x.jpg") center no-repeat;
     background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/main-city-tablet@2x.jpg") center no-repeat;
+    }
   }
 
   .advantages__image--bridge {
     background: url("../img/main-bridge-tablet@1x.jpg") center no-repeat;
     background-size: cover;
     order: 1;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/main-bridge-tablet@2x.jpg") center no-repeat;
+    }
   }
 
   .advantages__item--bridge .advantages__title {
@@ -253,6 +269,10 @@
 
   .advantages__image--city {
     background: url("../img/main-city-desktop@1x.jpg") center no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/main-city-desktop@2x.jpg") center no-repeat;
+    }
   }
 
   .advantages__wrapper {
@@ -275,6 +295,10 @@
 
   .advantages__image--bridge {
     background: url("../img/main-bridge-desktop@1x.jpg") center no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/main-bridge-desktop@2x.jpg") center no-repeat;
+    }
   }
 
   .advantages__description {

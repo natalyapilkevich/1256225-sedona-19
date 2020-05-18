@@ -46,11 +46,7 @@
 
 .gallery__image {
   margin-bottom: 17px;
-}
-
-.gallery__image--tablet,
-.gallery__image--desktop {
-  display: none;
+  display: block;
 }
 
 .gallery__description {
@@ -127,15 +123,6 @@
     margin: 0;
   }
 
-  .gallery__image--mobile,
-  .gallery__image--desktop {
-    display: none;
-  }
-
-  .gallery__image--tablet {
-    display: block;
-  }
-
   .gallery__title {
     padding-left: 20px;
   }
@@ -176,13 +163,7 @@
     width: 100%;
   }
 
-  .gallery__image--mobile,
-  .gallery__image--tablet {
-    display: none;
-  }
-
-  .gallery__image--desktop {
-    display: block;
+  .gallery__image {
     margin: 0;
   }
 
