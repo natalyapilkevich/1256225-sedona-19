@@ -16,6 +16,8 @@
   background-color: #81b3d2;
   text-align: center;
 
+  fill: #ffffff;
+
   &:hover {
     background-color: #669ec0;
   }
@@ -27,10 +29,6 @@
   &:active svg {
     opacity: 0.3;
   }
-}
-
-.social__link svg {
-  fill: #ffffff;
 }
 
 @media (min-width: $tablet-width) {

@@ -12,6 +12,16 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  fill: #5c6870;
+
+  &:hover {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #333333;
+    opacity: 0.3;
+  }
 }
 
 .controls__button--replay {
@@ -26,19 +36,6 @@
   margin-left: 11.07%;
 }
 
-.controls__button svg {
-  fill: #5c6870;
-}
-
-.controls__button:hover svg {
-  fill: #333333;
-}
-
-.controls__button:active svg {
-  fill: #333333;
-  opacity: 0.3;
-}
-
 @media (min-width: $tablet-width) {
   .controls {
     position: absolute;
@@ -46,6 +43,20 @@
     bottom: 52px;
     background-color: transparent;
     z-index: 1;
+  }
+
+  .controls__button {
+    fill: #ffffff;
+
+    &:hover {
+      fill: #ffffff;
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: #ffffff;
+      opacity: 0.3;
+    }
   }
 
   .controls__button--replay {
@@ -58,18 +69,6 @@
 
   .controls__button--fullscreen {
     margin-left: 31px;
-  }
-
-  .controls__button svg {
-    fill: #ffffff;
-  }
-
-  .controls__button:hover svg {
-    opacity: 0.6;
-  }
-
-  .controls__button:active svg {
-    opacity: 0.3;
   }
 }
 
