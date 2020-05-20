@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg">
+    </include>
+  </div>
   <header class="page-header">
     <div class="page-header__background">
       <div class="page-header__nav-wrapper">
@@ -47,21 +51,21 @@
     <main class="page-main">
       <h1 class="page-main__title">Оставьте свой отзыв</h1>
       <p class="page-main__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      <form class="page-main__review review" action="https://echo.htmlacademy.ru/" method="post" novalidate>
+      <form class="page-main__review review" action="https://echo.htmlacademy.ru/" method="post" novalidate="">
       <div class="review__block review__block--introduce">
         <fieldset>
           <legend class="review__title">Представьтесь:</legend>
           <p class="review__item">
             <label for="name">Имя*:</label>
-            <input id="name" type="text" name="name" placeholder="Петр" required>
+            <input id="name" type="text" name="name" placeholder="Петр" required="">
           </p>
           <p class="review__item">
             <label for="lastname">Фамилия*:</label>
-            <input id="lastname" type="text" name="lastname" placeholder="Иванов" required>
+            <input id="lastname" type="text" name="lastname" placeholder="Иванов" required="">
           </p>
           <p class="review__item">
             <label for="patronymic">Отчество:</label>
-            <input id="patronymic" type="text" name="patronymic" placeholder="Александрович" required>
+            <input id="patronymic" type="text" name="patronymic" placeholder="Александрович" required="">
           </p>
         </fieldset>
         </div>
@@ -71,11 +75,11 @@
           <div class="review__item-wrapper">
             <p class="review__item review__item--mobile">
               <label for="phone"><span class="review__extra-word">Контактный</span> телефон*:</label>
-              <input id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
+              <input id="phone" type="tel" name="phone" placeholder="Введите телефон" required="">
             </p>
             <p class="review__item review__item--mail">
               <label for="email">Электронная почта*:</label>
-              <input id="email" type="email" name="email" placeholder="Введите e-mail" required>
+              <input id="email" type="email" name="email" placeholder="Введите e-mail" required="">
             </p>
           </div>
         </fieldset>
@@ -84,7 +88,7 @@
         <fieldset>
           <legend class="review__title">Ваше общее впечатление:</legend>
             <p class="review__option">
-              <input class="review__option-input visually-hidden" type="radio" name="rating" id="rating-good" value="good" checked>
+              <input class="review__option-input visually-hidden" type="radio" name="rating" id="rating-good" value="good" checked="">
               <label class="review__answers" for="rating-good">Скорее положительное</label>
             </p>
             <p class="review__option">
@@ -102,15 +106,15 @@
           <legend class="review__title">Посещенные <br class="br--mobile br--tablet br--desktop">достопримечательности:</legend>
             <ul class="review__sight-list">
               <li class="review__sight-item">
-                <input class="review__option-input visually-hidden" type="checkbox" name="sight-bridge" id="sight-bridge" checked>
+                <input class="review__option-input visually-hidden" type="checkbox" name="sight-bridge" id="sight-bridge" checked="">
                 <label class="review__answers review__answers--sight" for="sight-bridge">Мост Дьявола</label>
               </li>
               <li class="review__sight-item">
-                <input class="review__option-input visually-hidden" type="checkbox" name="sight-mount" id="sight-mount" checked>
+                <input class="review__option-input visually-hidden" type="checkbox" name="sight-mount" id="sight-mount" checked="">
                 <label class="review__answers review__answers--sight" for="sight-mount">Гора-Колокол</label>
               </li>
               <li class="review__sight-item">
-                <input class="review__option-input visually-hidden" type="checkbox" name="sight-park" id="sight-park" checked>
+                <input class="review__option-input visually-hidden" type="checkbox" name="sight-park" id="sight-park" checked="">
                 <label class="review__answers review__answers--sight" for="sight-park">Слайд-парк</label>
               </li>
               <li class="review__sight-item">
@@ -154,19 +158,19 @@
             <li class="social__item">
               <a class="social__link social__link--twitter" href="">
                 <span class="visually-hidden">Twitter</span>
-                <svg width="18" height="15"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
+                <svg width="18" height="15"><use xlink:href="#sprite-icon-twitter"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="">
                 <span class="visually-hidden">Facebook</span>
-                <svg width="9" height="19"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
+                <svg width="9" height="19"><use xlink:href="#sprite-icon-facebook"></use></svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="">
                 <span class="visually-hidden">Youtube</span>
-                <svg width="20" height="14"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
+                <svg width="20" height="14"><use xlink:href="#sprite-icon-youtube"></use></svg>
               </a>
             </li>
           </ul>
@@ -174,7 +178,7 @@
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg width="27" height="34"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
+            <svg width="27" height="34"><use xlink:href="#sprite-logo-htmlacademy"></use></svg>
           </a>
         </div>
       </div>
@@ -184,3 +188,4 @@
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
 </body>
+</html>
