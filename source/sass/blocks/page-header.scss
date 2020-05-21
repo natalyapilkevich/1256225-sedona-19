@@ -120,11 +120,11 @@
   .page-header__intro--index {
     margin: 0 auto;
     height: 518px;
-    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, url("../img/bg-back-tablet@1x.jpg") center no-repeat;
+    background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-tablet@1x.jpg") center no-repeat;
     background-size: auto, cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, url("../img/bg-back-tablet@2x.jpg") center no-repeat;
+      background: url("../img/bg-intro-triangle-tablet.svg") bottom no-repeat, #2b3c44 url("../img/bg-back-tablet@2x.jpg") center no-repeat;
       background-size: auto, cover;
     }
   }
