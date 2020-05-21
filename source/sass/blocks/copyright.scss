@@ -1,5 +1,6 @@
 .copyright {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 130px;
   margin: 0 auto;
@@ -19,14 +20,15 @@
 
 .copyright__link {
   display: block;
+}
 
-  &:hover {
-    fill: #81b3d2;
-  }
+.copyright__link:hover svg {
+  fill: #81b3d2;
+}
 
-  &:active {
-    fill-opacity: 0.3;
-  }
+.copyright__link:active svg {
+  fill: #81b3d2;
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {

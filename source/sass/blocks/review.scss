@@ -183,7 +183,8 @@
   border-radius: 50%;
 }
 
-.review__option-input + .review__answers:hover::before {
+.review__option-input + .review__answers:hover::before,
+.review__option-input:focus + .review__answers::before {
   background-color: #e5e5e5;
 }
 
@@ -191,7 +192,8 @@
   background-color: #d5d5d5;
 }
 
-.review__option-input:checked + .review__answers:hover::before {
+.review__option-input:checked + .review__answers:hover::before,
+.review__option-input:checked:focus + .review__answers::before {
   background: #333333;
   border: 16px solid #e5e5e5;
 }
@@ -217,7 +219,8 @@
   background-position: center;
 }
 
-.review__option-input:checked + .review__answers--sight:hover::before {
+.review__option-input:checked + .review__answers--sight:hover::before,
+.review__option-input:checked:focus + .review__answers--sight::before {
   background: #e5e5e5;
   border: 16px solid #e5e5e5;
   background-image: url("../img/icon-tick.svg");
@@ -243,6 +246,7 @@
 
 .review__option {
   margin: 0 0 12px 0;
+  min-height: 58px;
 }
 
 .review__sight-item {
@@ -334,7 +338,7 @@
 
   .review__block--contacts .review__title {
     padding: 15px 0 15px 0;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .review__item {
@@ -470,6 +474,7 @@
 
   .review__block--contacts .review__item-wrapper {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 60px;
   }
 
@@ -506,12 +511,15 @@
   }
 
   .review__sight-list {
-    flex-wrap: nowrap;
     padding: 19px 0 0 0;
   }
 
   .review__sight-list .review__sight-item {
     width: auto;
+  }
+
+  .review__block--sight .review__title {
+    padding: 50px 0 4px 0;
   }
 
   .review__wrapper-button {

@@ -15,6 +15,9 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var server = require("browser-sync").create();
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -57,17 +60,26 @@ gulp.task("sprite", function () {
 });
 
 gulp.task("html", function () {
-  return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(gulp.dest("build"));
+  return gulp
+    .src("source/*.html")
+    .pipe(posthtml([include()]))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("minifyjs", function () {
+  return gulp.src("source/js/**/*.js")
+  .pipe(concat('scripts.js'))
+  .pipe(uglify())
+  .pipe(rename("scripts.min.js"))
+  .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -86,6 +98,7 @@ gulp.task("build", gulp.series(
   "images",
   "webp",
   "sprite",
+  "minifyjs",
   "html"
 ));
 

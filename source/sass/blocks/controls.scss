@@ -13,15 +13,15 @@
   border: none;
   background-color: transparent;
   fill: #5c6870;
+}
 
-  &:hover {
-    fill: #333333;
-  }
+.controls__button:hover svg {
+  fill: #333333;
+}
 
-  &:active {
-    fill: #333333;
-    opacity: 0.3;
-  }
+.controls__button:active svg {
+  fill: #333333;
+  opacity: 0.3;
 }
 
 .controls__button--replay {
@@ -47,16 +47,16 @@
 
   .controls__button svg {
     fill: #ffffff;
+  }
 
-    &:hover {
-      fill: #ffffff;
-      opacity: 0.6;
-    }
+  .controls__button:hover svg {
+    fill: #ffffff;
+    opacity: 0.6;
+  }
 
-    &:active {
-      fill: #ffffff;
-      opacity: 0.3;
-    }
+  .controls__button:active svg {
+    fill: #ffffff;
+    opacity: 0.3;
   }
 
   .controls__button--replay {
