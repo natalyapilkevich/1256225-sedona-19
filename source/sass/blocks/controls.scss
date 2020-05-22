@@ -15,9 +15,11 @@
   fill: #5c6870;
 }
 
-.controls__button:hover svg {
+.controls__button:hover svg,
+.controls__button:focus svg {
   fill: #333333;
 }
+
 
 .controls__button:active svg {
   fill: #333333;
@@ -49,7 +51,8 @@
     fill: #ffffff;
   }
 
-  .controls__button:hover svg {
+  .controls__button:hover svg,
+  .controls__button:focus svg {
     fill: #ffffff;
     opacity: 0.6;
   }

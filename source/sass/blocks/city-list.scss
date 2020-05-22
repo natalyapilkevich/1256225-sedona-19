@@ -1,7 +1,8 @@
 .city-list {
+  width: 320px;
   list-style: none;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 0 27px 0;
   background-color: white;
 }
@@ -76,12 +77,13 @@
     box-sizing: border-box;
     width: 100%;
     min-height: 330px;
-    padding: 145px 44px 20px 44px;
+    padding: 60px 44px 20px 44px;
   }
 
   .city-list__item {
     min-height: 160px;
     box-sizing: border-box;
+    padding-top: 85px;
   }
 
   .city-list__item--souvenir {
@@ -92,7 +94,7 @@
     font-size: 21px;
     line-height: 1.24;
     text-align: center;
-    padding: 0 0 20px 0;
+    padding: 14px 0 20px 0;
   }
 
   .city-list__description {
@@ -104,7 +106,7 @@
 
   .city-list__item--motel .city-list__title::before {
     margin: auto;
-    top: -85px;
+    top: 0;
     left: 0;
     right: 0;
     width: 75px;
@@ -113,8 +115,8 @@
 
   .city-list__item--souvenir .city-list__title::before {
     margin: auto;
-    top: -85px;
-    left: 0;
+    top: -3px;
+    left: -2px;
     right: 0;
     width: 64px;
     height: 75px;
@@ -122,7 +124,7 @@
 
   .city-list__item--food .city-list__title::before {
     margin: auto;
-    top: -85px;
+    top: 2px;
     left: 0;
     right: 0;
     width: 77px;
@@ -133,7 +135,7 @@
 @media (min-width: $desktop-width) {
   .city-list {
     width: $desktop-width;
-    padding: 145px 0 0 0;
+    padding: 60px 0 0 0;
   }
 
   .city-list__item {

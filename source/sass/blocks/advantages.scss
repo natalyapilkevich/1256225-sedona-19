@@ -180,11 +180,13 @@
   .advantages__item:first-child .advantages__wrapper {
     background: #81b3d2;
     padding-top: 44px;
+    padding-bottom: 38px;
   }
 
   .advantages__item--bridge .advantages__wrapper {
     background: #81b3d2;
     padding-top: 38px;
+    padding-bottom: 38px;
     order: 2;
   }
 
@@ -206,7 +208,8 @@
 
   .advantages__image {
     width: 66.7%;
-    height: 256px;
+    height: auto;
+    min-height: 256px;
   }
 
   .advantages__image--city {
