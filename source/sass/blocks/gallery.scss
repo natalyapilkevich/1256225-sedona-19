@@ -31,6 +31,10 @@
   margin: 0 auto;
 }
 
+.gallery__item a:focus {
+  box-shadow: 0 0 0 2px #669ec0;
+}
+
 .gallery__title {
   width: 100%;
   font-size: 14px;
@@ -129,6 +133,7 @@
 
   .gallery__description {
     padding-left: 20px;
+    max-width: 220px;
   }
 
   .gallery__counter {

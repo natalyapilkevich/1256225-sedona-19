@@ -23,10 +23,6 @@ var closeDenied = document.querySelector(".popup__close--denied");
 var form = document.querySelector("form");
 
 form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-});
-
-form.addEventListener("submit", function (evt) {
   if (form.checkValidity()) {
     popupSuccess.classList.add("popup__show");
     closeSuccess.addEventListener("click", function (evt) {

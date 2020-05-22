@@ -26,6 +26,10 @@
   fill: #81b3d2;
 }
 
+.copyright__link:focus svg {
+  fill: #81b3d2;
+}
+
 .copyright__link:active svg {
   fill: #81b3d2;
   opacity: 0.3;

@@ -55,6 +55,11 @@
   line-height: 58px;
   color: black;
   text-align: left;
+}
+
+.review__block input,
+.review__answers,
+.review__block textarea {
   padding-left: 20px;
 }
 
@@ -288,7 +293,8 @@
   padding: 15px 0 17px 20px;
   background-color: #81b3d2;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #669ec0;
   }
 
@@ -470,6 +476,10 @@
 
   .review__extra-word {
     display: none;
+  }
+
+  .review__answers {
+    padding: 12px 0 11px 80px;
   }
 
   .review__block--contacts .review__item-wrapper {
